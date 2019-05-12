@@ -1,6 +1,6 @@
 import BufferWriter from './BufferWriter';
 import BufferReader from './BufferReader';
-import { ObjectInterface } from '../types';
+import { ObjectInterface } from './types';
 
 export class UPAIR {
 

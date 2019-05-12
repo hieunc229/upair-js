@@ -1,5 +1,5 @@
-import * as GeneralConfig from "../generalConfig";
-import { ObjectInterface } from "../types";
+import * as GeneralConfig from "./generalConfig";
+import { ObjectInterface } from "./types";
 type BufferReaderOpts = {
   buffer: ArrayBuffer;
   bSize?: number;

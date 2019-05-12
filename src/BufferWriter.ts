@@ -1,6 +1,6 @@
 
-import * as GeneralConfig from '../generalConfig';
-import { ObjectInterface } from '../types';
+import * as GeneralConfig from './generalConfig';
+import { ObjectInterface } from './types';
 
 type BufferObject = { view: DataView, pos: number };
 type BufferWriterOpts = {
