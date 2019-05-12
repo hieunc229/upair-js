@@ -5,6 +5,8 @@ developed for communicate with `vasern-server`.
 
 Since data is stored as binary in data file, by using binary format data, we can avoid format data in the server (which reduce server work load).
 
+*__Note__: server will also needs a `upair` parser to convert binary to object-like type*
+
 ## Example
 
 ```js
@@ -16,7 +18,7 @@ var jsObject = {
     yearOfBirth: 1984
 };
 
-// Convert to binary format
+// Convert to binary format (ArrayBuffer)
 var arrayBuffer = UPAIR.toBuffer(jsObject);
 
 // Convert back to JavaScript Object
