@@ -1,5 +1,7 @@
 import * as GeneralConfig from "./generalConfig";
 import { ObjectInterface } from "./types";
+import { START_POS } from "./config";
+
 type BufferReaderOpts = {
   buffer: ArrayBuffer;
   bSize?: number;
@@ -12,7 +14,7 @@ export default class BufferReader {
   constructor(opts: BufferReaderOpts) {
     this.buffer = new DataView(opts.buffer);
     this.bSize = opts.bSize || 512;
-    this.pos = 10;
+    this.pos = START_POS;
   }
 
   toObject() {

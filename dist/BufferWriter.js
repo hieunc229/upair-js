@@ -8,6 +8,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var GeneralConfig = __importStar(require("./generalConfig"));
+var config_1 = require("./config");
 var BufferWriter = /** @class */ (function () {
     function BufferWriter(opts) {
         var _this = this;
@@ -132,8 +133,8 @@ var BufferWriter = /** @class */ (function () {
         var _this = this;
         var object = this.object;
         var bufferObject = {
-            view: new DataView(new ArrayBuffer(this._sizeOf(10, object))),
-            pos: 10
+            view: new DataView(new ArrayBuffer(this._sizeOf(config_1.START_POS, object))),
+            pos: config_1.START_POS
         };
         var keys = Object.keys(object);
         bufferObject.view.setInt8(1, keys.length);

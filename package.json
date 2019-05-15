@@ -1,6 +1,6 @@
 {
-  "name": "vsjs-upair",
-  "version": "0.0.1",
+  "name": "upair",
+  "version": "0.0.2",
   "description": "Like JSON but stored as binary underneat, used for direct commnicate with RESTful server",
   "main": "dist/index.js",
   "scripts": {

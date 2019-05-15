@@ -1,12 +1,15 @@
 
 import * as GeneralConfig from './generalConfig';
 import { ObjectInterface } from './types';
+import { START_POS } from "./config";
 
 type BufferObject = { view: DataView, pos: number };
 type BufferWriterOpts = {
 	object: any;
 	bSize?: number
 }
+
+
 export default class BufferWriter {
 	object: ObjectInterface;
 	bSize: number;
@@ -20,8 +23,8 @@ export default class BufferWriter {
 		
 		let { object } = this;
 		var bufferObject: BufferObject = {
-			view: new DataView(new ArrayBuffer(this._sizeOf(10, object))), 
-			pos: 10
+			view: new DataView(new ArrayBuffer(this._sizeOf(START_POS, object))), 
+			pos: START_POS
 		}
 
 		const keys = Object.keys(object);

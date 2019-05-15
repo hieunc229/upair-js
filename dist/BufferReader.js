@@ -8,6 +8,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var GeneralConfig = __importStar(require("./generalConfig"));
+var config_1 = require("./config");
 var BufferReader = /** @class */ (function () {
     function BufferReader(opts) {
         var _this = this;
@@ -74,7 +75,7 @@ var BufferReader = /** @class */ (function () {
         };
         this.buffer = new DataView(opts.buffer);
         this.bSize = opts.bSize || 512;
-        this.pos = 10;
+        this.pos = config_1.START_POS;
     }
     BufferReader.prototype.toObject = function () {
         var numOfProps = this.buffer.getInt8(1);
